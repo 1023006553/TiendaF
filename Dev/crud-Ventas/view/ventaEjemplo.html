@@ -1,0 +1,69 @@
+<header class="text-center my-4">
+    <h1 class="display-4">Datos Ventas</h1>
+    <a href="registrarVenta.html" class="btn btn-primary btn-lg">Registrar Ventas</a>
+</header>
+
+<div class="container w-75 mx-auto border p-4 shadow rounded">
+
+    <!-- Tabla de Datos de Ventas -->
+    <h3 class="mb-4">VENTAS</h3>
+    <table class="table table-striped table-hover" id="tablaDatos">
+        <thead>
+            <tr>
+                <th class="text-center">VentaID</th>
+                <th class="text-center">ProductoID</th>
+                <th class="text-center">CantidadVendida</th>
+                <th class="text-center">PrecioVenta</th>
+                <th class="text-center">FechaVenta</th>
+                <th class="text-center" colspan="2">Operaciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+
+    <div class="d-flex justify-content-center my-3">
+        <button class="btn btn-custom" id="paginaAnterior">Anterior</button>
+        <button class="btn btn-custom ms-3" id="paginaSiguiente">Siguiente</button>
+    </div>
+
+    <!-- Formulario de Registro de Producto -->
+    <div class="floating-form border p-4 bg-light mt-4">
+        <form>
+            <h5 class="text-center">Formulario de Registro de Producto</h5>
+            <hr>
+
+            <div class="mb-3">
+                <label for="VentaID" class="form-label">VentaID</label>
+                <input type="text" class="form-control" id="VentaID" placeholder="Ingrese el ID de la venta" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ProductoID" class="form-label">ProductoID</label>
+                <input type="text" class="form-control" id="ProductoID" placeholder="Ingrese el ID del producto" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="CantidadVendida" class="form-label">Cantidad Vendida</label>
+                <textarea class="form-control" id="CantidadVendida" rows="3" placeholder="Ingrese la cantidad vendida" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="Precio" class="form-label">Precio Venta (en $)</label>
+                <input type="number" class="form-control" id="Precio" placeholder="Ingrese el precio del producto" required step="0.01">
+            </div>
+
+            <div class="mb-3">
+                <label for="FechaVenta" class="form-label">Fecha Venta</label>
+                <input type="date" class="form-control" id="FechaVenta" required>
+            </div>
+            
+            <button type="submit" id="registrar" class="btn btn-success">Registrar</button>
+            <a href="index.html" class="btn btn-primary ms-5">Regresar</a>
+        </form>
+    </div>
+</div>
+
+<script src="../js/getVenta.js"></script>
+<script src="../js/putProducto.js"></script>
+<script src="../js/postVenta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Tienda Fruver</title>
+    <link rel="stylesheet" href="js/css/Servcios.CSS">
+</head>
+<body>
+    <header>
+        <h1>Servicios de Tienda Fruver</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <p>En Tienda Fruver, ofrecemos una variedad de servicios diseñados para satisfacer tus necesidades. A continuación, te presentamos algunos de ellos:</p>
+            <ul>
+                <li><strong>Entrega a Domicilio:</strong> Realizamos entregas rápidas y eficientes de nuestros productos frescos.</li>
+                <li><strong>Pedidos Personalizados:</strong> Si no encuentras lo que buscas, contáctanos y haremos un pedido especial solo para ti.</li>
+                <li><strong>Descuentos Semanales:</strong> Ofrecemos descuentos en productos seleccionados cada semana. ¡No te los pierdas!</li>
+                <li><strong>Consejos Nutricionales:</strong> Nuestro equipo está preparado para ofrecerte asesoría sobre cómo seleccionar los mejores productos para tu dieta.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información sobre nuestros servicios, no dudes en <span id="contacto-info"> contactarnos</span>.</p>
+        </section>
+
+        <button id="showForm">Mostrar Formulario de Contacto</button>
+        <div id="formContainer" style="display: none;">
+            <h3>Formulario de Contacto</h3>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tienda Fruver. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/Servcios.JS"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* Loginstyle.css */
+body {
+    background-color: #f8f9fa; /* Color de fondo general */
+    background-image: url('ruta/a/tu/fondo.jpg'); /* Fondo de la imagen */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+}
+
+header {
+    background-color: #e9ecef; /* Fondo del encabezado */
+}
+
+footer {
+    background-color: #e9ecef; /* Fondo del pie de página */
+}
+
+main {
+    background-color: #ffffff; /* Fondo blanco para el área principal */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}

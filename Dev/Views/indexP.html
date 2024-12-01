@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Fruver Calle 13 CAMBIO REALIZADO</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="Loginstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <style>
+            /* Estilos para las tarjetas con efecto parallax */
+            .card {
+                perspective: 1000px;
+                overflow: hidden;
+            }
+            .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+            }
+            .card:hover .card-inner {
+                transform: translateZ(30px);
+            }
+            .card img {
+                transition: transform 0.5s;
+            }
+            .card:hover img {
+                transform: scale(1.1);
+            }
+            .card-body {
+                position: relative;
+                z-index: 2; /* Asegúrate de que el contenido esté por encima de la imagen */
+            }
+        </style>
+    </head>
+
+    <body>
+       <nav class="navbar navbar-expand navbar-dark bg-dark">
+           <div class="nav navbar-nav">
+               <a class="nav-item nav-link active" href="indexP.html" aria-current="page">Trade Management <i class="bi bi-heart-arrow"></i> System<span class="visually-hidden">(current)</span></a>
+               <a class="nav-item nav-link active" href="indexP.html" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
+               <a class="nav-item nav-link" href="Productos.html">Productos</a>
+               <ul class="navbar-nav ms-auto">
+                   <li class="nav-item">
+                       <a class="nav-link" href="#" id="user-name">
+                           <i class="bi bi-person-circle"></i> 
+                           <span id="username-display"></span>
+                       </a>
+                   </li>
+                   <li class="nav-item" id="login-item" style="display: none;">
+                       <a class="nav-link" href="Login_Index.html">
+                           <i class="bi bi-person-circle"></i> Iniciar Sesion
+                       </a>
+                   </li> 
+               </ul>
+           </div>
+       </nav>
+
+       <script>
+           const user = {
+               isLoggedIn: true,
+               username: "NombreDeUsuario"
+           };
+
+           window.onload = function() {
+               const usernameDisplay = document.getElementById('username-display');
+               const loginItem = document.getElementById('login-item');
+
+               if (user.isLoggedIn) {
+                   usernameDisplay.textContent = user.username; 
+                   loginItem.style.display = 'none'; 
+               } else {
+                   usernameDisplay.textContent = ''; 
+                   loginItem.style.display = 'block'; 
+               }
+           };
+       </script>
+
+       <div class="jumbotron jumbotron-fluid">
+           <div class="container text-center">
+              <h1 class="display-4">Bienvenido a nuestra tienda</h1>
+              <p class="lead">Encuentra las mejores ofertas en productos</p>
+              <a href="Productos.html" class="btn btn-primary btn-lg">Ver productos</a>
+           </div>
+       </div>
+
+       <!-- Sección de productos destacados -->
+       <div class="container mt-4">
+           <h2 class="text-center">Productos Destacados</h2>
+           <div class="row">
+               <div class="col-md-4">
+                   <div class="card">
+                       <div class="card-inner">
+                           <img src="img/jabon liquido.jpg" class="card-img-top" alt="...">
+                           <div class="card-body">
+                               <h5 class="card-title">Jabon liquido</h5>
+                               <p class="card-text">$5.000</p>
+                               <a href="#" class="btn btn-primary">Ver detalles</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card">
+                       <div class="card-inner">
+                           <img src="img/jabon en polvo.png" class="card-img-top" alt="...">
+                           <div class="card-body">
+                               <h5 class="card-title">Jabon en Polvo</h5>
+                               <p class="card-text">$6.500</p>
+                               <a href="#" class="btn btn-primary">Ver detalles</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="card">
+                       <div class="card-inner">
+                           <img src="img/JABON-POLVO-AS-LIMON.jpg" class="card-img-top" alt="...">
+                           <div class="card-body">
+                               <h5 class="card-title">Jabon en Polvo</h5>
+                               <p class="card-text">$3.200</p>
+                               <a href="#" class="btn btn-primary">Ver detalles</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <footer class="container-fluid">
+           <div class="row p-4 bg-secondary text-white">
+               <div class="col-md-4">
+                   <h3>Fruver Calle 13</h3>
+                   <p>Comprometidos con la satisfacción del cliente.</p>
+               </div>
+               <div class="col-md-4">
+                   <h3>Contáctenos</h3>
+                   <ul>
+                       <li>Teléfono: 319-373-0162</li>
+                       <li>Correo Electrónico: <a href="mailto:Carlos20.molina123@gmail.com" class="text-white">Carlos20.molina123@gmail.com</a></li>
+                       <li>Dirección: Calle 13A #18H-19</li>
+                   </ul>
+               </div>
+               <div class="col-md-4">
+                   <p>Síganos en nuestras redes sociales:</p>
+                   <a href="#" class="text-white">Facebook</a>
+                   <a href="#" class="text-white">Twitter</a>
+                   <a href="#" class="text-white">Instagram</a>
+               </div>
+           </div>
+           <div class="row bg-dark">
+               <p class="text-white text-center mb-0">© 2024 Fruver Calle 13. Todos los derechos reservados.</p>
+           </div>
+       </footer>
+
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+       <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/679b476a11.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="js/css/Loginstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <title>Login & Registro</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">T.M.S</h2>
+
+        <nav class="navegacion">
+            <a href="indexP.html">Inicio</a>
+            <a href="/Dev/Views/Quienes_Somos.html">Informacion</a>
+            <a href="Servcios.html">Servicios</a>
+            <a href="Contactanos.html">Contactanos</a>
+            <button class="btn" id="loginBtn">Iniciar Sesion</button>
+        </nav>
+    </header>
+
+    <div class="fondo">
+        <span class="icono-cerrar" id="closeIcon"><i class="fa-solid fa-xmark"></i></span>
+
+        <div class="contenedor-form login">
+            <h2>Iniciar Sesion</h2>
+            <form id="loginForm" action="" method="post">
+                <div class="contenedor-input">
+                    <span class="icono"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="correo" required id="correo">
+                    <label for="correo">Email</label>
+                </div>
+
+                <div class="contenedor-input">
+                    <input type="contraseña" required class="contraseña" id="contraseña">
+                    <label for="contraseña">Contraseña</label>
+                    <span class="icono" id="togglePassword"><i class="fa-solid fa-eye"></i></span>
+                </div>
+
+                <div class="recordar">
+                    <label for="rememberMe"><input type="checkbox" id="rememberMe">Recordar Sesion</label>
+                    <a href="#">¿Olvide mi Contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn">Iniciar Sesion</button>
+
+                <div class="registrar">
+                    <p>¿No tienes cuenta? <a href="#" class="registrar-link">Registrarse</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="contenedor-form registrar">
+            <h2>Registrarse</h2>
+            <form id="registerForm" action="" method="post">
+                <div class="contenedor-input">
+                    <span class="icono"><i class="fa-solid fa-id-badge"></i></span>
+                    <input type="text" required id="UserId">
+                    <label for="UserId">ID de Usuario</label>
+                </div>
+
+                <div class="contenedor-input">
+                    <span class="icono"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" required id="NombreUsuario">
+                    <label for="NombreUsuario">Nombre de Usuario</label>
+                </div>
+        
+                <div class="contenedor-input">
+                    <span class="icono"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="Email" required id="Email">
+                    <label for="Email">Email</label>
+                </div>
+        
+                <div class="contenedor-input">
+                    <input type="password" required id="Contraseña">
+                    <label for="Contraseña">Contraseña</label>
+                    <span class="icono" id="togglePassword"><i class="fa-solid fa-eye"></i></span>
+                </div>
+        
+                <div class="recordar">
+                    <label for="terms"><input type="checkbox" id="terms" required>Acepto los términos y condiciones</label>
+                </div>
+        
+                <button type="submit" class="btn">Registrarme</button>
+        
+                <div class="registrar">
+                    <p>¿Tienes una cuenta? <a href="#" class="login-link">Iniciar Sesión</a></p>
+                </div>
+            </form>
+        </div>
+        
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="/Dev/Views/js/LoginRegistro.JS"></script>
+</body>
+</html>

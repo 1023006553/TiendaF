@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .nav {
+            background-color: #007bff;
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            border-radius: 5px;
+        }
+
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+
+        #cart {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Esconder el carrito inicialmente */
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .product {
+            margin: 5px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product:last-child {
+            border-bottom: none; /* Remover el borde del último producto */
+        }
+
+        #cart-total {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#" aria-current="page" onclick="toggleCart()">
+            Carrito 🛒 <span id="cart-count">0</span>
+        </a>
+    </li>
+</ul>
+
+<div id="cart">
+    <h3>Productos en el Carrito:</h3>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+</div>
+
+<script>
+    let cartItems = [];
+
+    function addItemToCart(productName, productPrice) {
+        cartItems.push({ name: productName, price: productPrice });
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartCount = document.getElementById('cart-count');
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cartTotalDiv = document.getElementById('cart-total');
+
+        cartCount.textContent = cartItems.length;
+        
+        // Mostrar los productos en el carrito
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+        cartItems.forEach(item => {
+            cartItemsDiv.innerHTML += `<div class="product">${item.name} - $${item.price.toFixed(2)}</div>`;
+            total += item.price;
+        });
+        
+        cartTotalDiv.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+    }
+
+    function toggleCart() {
+        const cart = document.getElementById('cart');
+        cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Ejemplo de agregar productos al carrito
+    addItemToCart('Producto 1', 10.00);
+    addItemToCart('Producto 2', 15.50);
+    addItemToCart('Producto 3', 7.75);
+</script>
+
+</body>
+</html>
+

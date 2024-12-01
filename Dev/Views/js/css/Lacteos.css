@@ -1,0 +1,25 @@
+
+body {
+    background-color: #f5f5f5; /* Cambia este color según tus preferencias */
+    background-image: url("/Dev/Views/img/Agricultura-de-plantación.jpg"); /* Puedes usar una imagen como fondo si lo deseas */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la página */
+}
+body {
+    background-color: #f5f5f5; /* Color de fondo de respaldo */
+    background-image: url('ruta/a/tu/fondo.jpg'); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la página */
+}
+
+header {
+    background-color: #ffffff; /* Fondo del encabezado */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
+}
+
+footer {
+    background-color: #ffffff; /* Fondo del pie de página */
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1); /* Sombra para el pie de página */
+}
